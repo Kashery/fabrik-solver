@@ -4,8 +4,8 @@
 #include <float.h>
 #include <time.h>
 
-#include "points.h"
-#include "fabrik.h"
+#include <points.h>
+#include <fabrik.h>
 
 int main(int argc, char const *argv[])
 {

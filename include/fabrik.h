@@ -1,7 +1,7 @@
 #ifndef _FABRIK_H
 #define _FABRIK_H
 
-#include "points.h"
+#include <points.h>
 
 void solve_fabrik_b(Point2D* links, Point2D goal);
 void solve_fabrik_b3d(Point3D* links, Point3D goal);

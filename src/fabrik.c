@@ -1,4 +1,4 @@
-#include "fabrik.h"
+#include <fabrik.h>
 
 void solve_fabrik_b(Point2D* links, Point2D goal)
 {
