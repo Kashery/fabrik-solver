@@ -12,4 +12,6 @@ void solve_fabrik_f3d(Point3D* links);
 void solve_fabrik(Point2D* links, Point2D goal, double precision);
 void solve_fabrik3d(Point3D* links, Point3D goal, double precision);
 
+double generate_mycobot280pi(double x, double y, double z);
+
 #endif // _FABRIK_H
