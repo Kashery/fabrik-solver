@@ -118,14 +118,14 @@ void solve_fabrik(Point2D* links, Point2D goal, double precision)
     
     
     while(find_dist(find_last(links), g)>precision){
-        printf("Connected to C extension...\n");
+        
         solve_fabrik_b(links, goal);
         solve_fabrik_f(links);
         pass = pass + 1;
         
     }
     
-    printf("finished after %d passes \n", pass);
+    //printf("finished after %d passes \n", pass);
 }
 
 void solve_fabrik3d(Point3D* links, Point3D goal, double precision)
@@ -249,5 +249,8 @@ double generate_mycobot280pi(double x, double y, double z){
     
     // printf("%f\n", joint1);
     print_all3d(p03d);
+    free_3d(p03d);
+    free_2d(p1);
+
     return joint1;
 }

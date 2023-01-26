@@ -58,20 +58,20 @@ void print_all3d(Point3D* _)
             t = t->_next;
         }
     }
-    printf("\n");
-    t = _;
-    while(1)
-    {
-        if(t->_next == NULL){
+    // printf("\n");
+    // t = _;
+    // while(1)
+    // {
+    //     if(t->_next == NULL){
             
-            break;
-        }else{
-            printf(" %f ", find_dist3d(t,t->_next));
-            printf(",");
-            t = t->_next;
-        }
-    }
-    printf("\n");
+    //         break;
+    //     }else{
+    //         printf(" %f ", find_dist3d(t,t->_next));
+    //         printf(",");
+    //         t = t->_next;
+    //     }
+    // }
+    // printf("\n");
 }
 
 double find_dist(Point2D* A, Point2D* B)
@@ -86,9 +86,7 @@ double find_dist3d(Point3D* A, Point3D* B)
 Point2D* find_last(Point2D* first)
 {
     Point2D* _  = first;
-    printf("Connected to C extension...\n");
     while (1){
-        
         if (_->_next == NULL){
             
             return _;
@@ -150,6 +148,20 @@ Point3D *normal_3d(Point3D *A, Point3D *B, double dist)
     _t->y = A->y + (dist)*(B->y - A->y)/nd;
     _t->z = A->z + (dist)*(B->z - A->z)/nd;
     return _t;
+}
+
+void free_3d(Point3D* head){
+    if(head->_next !=NULL){
+        free_3d(head->_next);
+    }
+    free(head);
+}
+
+void free_2d(Point2D* head){
+    if(head->_next !=NULL){
+        free_2d(head->_next);
+    }
+    free(head);
 }
 
 

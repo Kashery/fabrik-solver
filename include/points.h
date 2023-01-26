@@ -41,4 +41,8 @@ Point3D* find_bet3d(Point3D* A, Point3D* B, double dist);
 
 Point3D* normal_3d(Point3D* A, Point3D* B, double dist);
 
+
+void free_3d(Point3D* head);
+void free_2d(Point2D* head);
+
 #endif // _POINT_H
